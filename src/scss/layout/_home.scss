@@ -1,0 +1,90 @@
+/* --------------------------------------------------------------- */
+/* == Layout home                                                  */
+/* --------------------------------------------------------------- */
+
+// This is an exemple for the starter demo, you can delete all the followings
+
+#home{
+
+  #firstPanel{
+    min-height: 100vh;
+    text-align: center;
+
+    h1{
+      line-height: 1.5;
+    }
+    
+    // Responsive, force the fist panel to display table / table-cell to vertical align middle it !
+    @media (max-width: $w540){
+      display: table;
+      .cell{
+        display: table-cell;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  // Fix min-height property for Firefox ...
+  _:-moz-tree-row(hover), #home #firstPanel{
+    height: 100vh;
+  }
+  
+  #feature{
+    background-color: $grey-soft;
+    padding: 50px 0;
+    text-align: center;
+    
+    span{
+      display: block;
+      margin-top: 15px;
+      font-size: rem(40);
+    }
+    @media (max-width: $w540){
+      .cell{
+        &+.cell{
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  #who{
+    padding: 80px 0;
+
+    span{
+      display: block;
+      text-align: center;
+      font-size: rem(50);
+
+    }
+    h2{
+      text-align: center;
+    }
+    p{
+      margin: 70px 0 40px 0;
+      @media (max-width: $w960){
+        text-align: center;
+      }
+    }
+    .cell-top{
+      text-align: center;
+
+      span{
+        display: block;
+        margin-bottom: 10px;
+        font-size: rem(40);
+        color: $black;
+      }
+      &:hover{
+        span{
+          color: $green-hover;
+        }
+      }
+      @media (max-width: $w540){
+        &+.cell-top{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

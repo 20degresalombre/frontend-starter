@@ -1,0 +1,50 @@
+/* --------------------------------------------------------------- */
+/* == Variables                                                    */
+/* --------------------------------------------------------------- */
+
+/*------------------------------------*\
+    == Colors
+\*------------------------------------*/
+
+$white                      : #fff;
+$black                      : #000;
+$green                      : #00ba80;
+$green-hover                : #009c6b;
+$blue-fb-button             : #3b5994;
+$blue-fb-button-shadow      : #374d83;
+$grey-soft                  : #eee;
+
+
+/*------------------------------------*\
+    == Config
+\*------------------------------------*/
+
+$base-background-color      : $white;
+$base-font-color            : $black;
+$base-link-color            : $green;
+$base-link-color-hover      : $green-hover;
+$base-btn-color             : $green;
+$base-btn-color-hover       : $green-hover;
+
+
+/*------------------------------------*\
+    == Breakpoints
+\*------------------------------------*/
+
+$bp-ultra-large-screen      : em(1920);
+$bp-extra-large-screen      : em(1600);
+$bp-large-screen            : em(1280);
+$w960                       : em(960);
+$w540                       : em(540);
+$w400                       : em(400);
+$w325                       : em(325);
+
+
+/*------------------------------------*\
+    == Fonts
+\*------------------------------------*/
+
+$base-font-family           : Lato, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$code-font                  : 'Source Code Pro', Consolas, monospace;
+$base-font-size             : em(16);
+$base-line-height           : 1.625em;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  @@include('./partials/head.tpl.html', {
+      "meta_title": "YOUR-TITLE",
+      "meta_desc": "YOUR-DESCRIPTION"
+  })
+</head>
+<body id="home">
+
+  <!-- EXEMPLE CONTENT -->
+
+  <!-- First section -->
+  <section id="firstPanel" class="table">
+    
+    <div class="cell">
+
+      <h1>Frontend project starter exemple</h1>
+
+      <p>
+        This is a quick exemple of the project that you can find <a href="https://github.com/20degresalombre/frontend-starter">here</a>.
+      </p>
+
+      <a href="#feature" class="btn">Discover more</a>
+      <a href="#who" class="btn-outline">Who create it ?</a>
+
+    </div>
+    
+  </section>
+
+  <!-- Second section -->
+  <section id="feature">
+    <div class="wrapper">
+      <div class="table-fixed">
+        <div class="cell">
+          <span class="icon-magic-wand"></span>
+          <p>Easy to use</p>
+        </div>
+        <div class="cell">
+          <span class="icon-rocket"></span>
+          <p>Quick start</p>
+        </div>
+        <div class="cell">
+          <span class="icon-cogs"></span>
+          <p>Module friendly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Third section -->
+  <section id="who">
+
+    <div class="wrapper">
+      <span class="icon-newspaper"></span>
+      <h2>Made with love by <a href="http://www.20degresalombre.com/">2O degrés à l'ombre</a></h2>
+
+      <p>You can find us on :</p>
+      <div class="table-fixed">
+        <div class="cell-top">
+          <a href="https://github.com/20degresalombre">
+            <span class="icon-github"></span>
+            Github
+          </a>
+        </div>
+        <div class="cell-top">
+          <a href="https://twitter.com/20degresalombre">
+            <span class="icon-twitter"></span>
+            Twitter
+          </a>
+        </div>
+        <div class="cell-top">
+          <a href="https://www.facebook.com/20degresalombre">
+            <span class="icon-facebook"></span>
+            Facebook
+          </a>
+        </div>
+        <div class="cell-top">
+          <a href="http://www.20degresalombre.com/">
+            <span class="icon-link"></span>
+            Our website
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+
+  @@include('./partials/footer.tpl.html')
+
+  <script src="js/main.js"></script>
+</body>
+</html>

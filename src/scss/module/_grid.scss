@@ -1,0 +1,56 @@
+/* --------------------------------------------------------------- */
+/* == Module grid                                                  */
+/* --------------------------------------------------------------- */
+
+/*------------------------------------*\
+    == Wrapper
+\*------------------------------------*/
+
+.wrapper{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $bp-extra-large-screen){
+    max-width: 1200px;
+  }
+  @media (max-width: $w540){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+/*------------------------------------*\
+    == Display class
+\*------------------------------------*/
+
+.table {
+  display: table;
+  width: 100%;
+}
+.table-fixed {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cell-top {
+  display: table-cell;
+  vertical-align: top
+}
+
+.inbl{
+  display: inline-block;
+}
+
+@media (max-width: $w540){
+  .table, .table-fixed, .cell, .cell-top{
+    display: block;
+    text-align: center;
+  }
+}

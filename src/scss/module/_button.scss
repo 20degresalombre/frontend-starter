@@ -1,0 +1,43 @@
+/* --------------------------------------------------------------- */
+/* == Module button                                                */
+/* --------------------------------------------------------------- */
+
+.btn, .btn-outline{
+  display: inline-block;
+  border: 1px solid $base-btn-color;
+  padding: 5px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+
+  &:active, &:hover, &:focus {
+    border: 1px solid $base-btn-color-hover;
+  }
+
+  @media(max-width: $w400){
+    display: block;
+
+    &+.btn, &+.btn-outline{
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn{
+  background-color: $base-btn-color;
+  color: $white;
+
+  &:active, &:hover, &:focus {
+    color: $base-btn-color-hover;
+    background-color: transparent;
+  }
+}
+
+.btn-outline{
+  background-color: transparent;
+  color: $base-btn-color;
+
+  &:active, &:hover, &:focus {
+    background-color: $base-btn-color-hover;
+    color: $white;
+  }
+}

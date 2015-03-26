@@ -11,7 +11,7 @@ window.viewportUnitsBuggyfill.init();
 $(function () {
 
   FastClick.attach(document.body);
-
+  new WOW().init();
 
 
 

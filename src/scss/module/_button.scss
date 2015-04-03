@@ -22,22 +22,21 @@
   }
 }
 
-.btn{
+.btn, .btn:visited{
   background-color: $base-btn-color;
   color: $white;
 
   &:active, &:hover, &:focus {
-    color: $base-btn-color-hover;
-    background-color: transparent;
+    background-color: $base-btn-color-hover;
+    color: $white;
   }
 }
 
-.btn-outline{
+.btn-outline, .btn-outline:visited{
   background-color: transparent;
   color: $base-btn-color;
 
   &:active, &:hover, &:focus {
-    background-color: $base-btn-color-hover;
-    color: $white;
+    color: $base-btn-color-hover;
   }
 }

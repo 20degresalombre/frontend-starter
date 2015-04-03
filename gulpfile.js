@@ -10,11 +10,15 @@ var gulp          = require('gulp'),
     concat        = require('gulp-concat'),
     cmq           = require('gulp-combine-media-queries'),
     cache         = require('gulp-cache'),
-    livereload    = require('gulp-livereload'),
+    argv          = require('yargs').argv,
     del           = require('del'),
-    opn           = require('opn'),
     fileinclude   = require('gulp-file-include'),
     runSequence   = require('run-sequence');
+
+if(argv._ != "build"){
+  var livereload    = require('gulp-livereload'),
+      opn           = require('opn');
+}
 
 gulp.task('express', function() {
   var express = require('express');
@@ -114,6 +118,23 @@ gulp.task('openbrowser', function() {
   // opn( 'http://localhost:4000');
 });
 
-gulp.task('default', ['clean', 'fileinclude', 'styles', 'scripts', 'express', 'livereload', 'watch', 'openbrowser'], function() {
+gulp.task('default', function(cb) {
+  runSequence('clean', 
+              'fileinclude', 
+              'styles', 
+              'scripts', 
+              'express', 
+              'livereload', 
+              'watch', 
+              'openbrowser',
+              cb);
+});
 
+
+gulp.task('build', function(cb) {
+  runSequence('clean', 
+              'fileinclude',
+              'styles',
+              'scripts',
+              cb);
 });

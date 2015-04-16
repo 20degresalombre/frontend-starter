@@ -38,10 +38,10 @@
 .cell {
   display: table-cell;
   vertical-align: middle;
-}
-.cell-top {
-  display: table-cell;
-  vertical-align: top
+
+  &.top{
+    vertical-align: top;
+  }
 }
 
 .inbl{

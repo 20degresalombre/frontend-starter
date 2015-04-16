@@ -13,6 +13,8 @@ $green-hover                : #009c6b;
 $blue-fb-button             : #3b5994;
 $blue-fb-button-shadow      : #374d83;
 $grey-soft                  : #eee;
+$grey-soft-darker           : darken($grey-soft, 25%);
+$grey-soft-darkest          : darken($grey-soft, 45%);
 
 
 /*------------------------------------*\

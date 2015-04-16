@@ -2,8 +2,8 @@
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
 <head>
   @@include('./partials/head.tpl.html', {
-      "meta_title": "YOUR-TITLE",
-      "meta_desc": "YOUR-DESCRIPTION"
+      "meta_title": "Frontend Project Starter",
+      "meta_desc": "Frontend Project Starter is a tool to improve your productivity when you build a Frontend porject"
   })
 </head>
 <body id="home">
@@ -21,8 +21,8 @@
         To improve your productivity in a frontend project <a href="https://github.com/20degresalombre/frontend-starter">follow this link</a>.
       </p>
 
-      <a href="#feature" class="btn">How it's work</a>
-      <a href="#who" class="btn-outline">Who create it ?</a>
+      <a href="#feature" class="btn">How it works</a>
+      <a href="#who" class="btn-outline">Who created it ?</a>
 
     </div>
     
@@ -32,50 +32,105 @@
   <section id="feature">
     <div class="wrapper wow slideInUp">
       <div class="table-fixed">
-        <div class="cell">
-          <span class="icon-magic-wand"></span>
-          <p>Easy to use</p>
-        </div>
-        <div class="cell">
-          <span class="icon-rocket"></span>
-          <p>Quick start</p>
-        </div>
-        <div class="cell">
+        <div class="cell top">
           <span class="icon-cogs"></span>
-          <p>Module friendly</p>
+          <h2>Automate your workflow</h2>
+          <div class="table-fixed">
+            <div class="cell top">
+              <span class="icon-back-in-time"></span>
+              Time savings on recurring tasks
+            </div>
+            <div class="cell top">
+              <span class="icon-gauge"></span>
+              More responsiveness in the process design / validation
+            </div>
+          </div>
+        </div>
+        <div class="cell top">
+          <span class="icon-atom"></span>
+          <h2>Think modular, reusability</h2>
+          <div class="table-fixed">
+            <div class="cell top">
+              <span class="icon-light-bulb"></span>
+              Having a cleaner and comprehensible structure
+            </div>
+            <div class="cell top">
+              <span class="icon-rocket"></span>
+              To use "snippets" of a project to another very easily
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Third section -->
+  <section id="how">
+    <div class="wrapper wow slideInUp">
+      <h2>How to use it ?</h2>
+
+      <p>
+        As simple as this:
+      </p>
+      <div class="table-fixed">
+        <li>
+          Clone the <a href="https://github.com/20degresalombre/frontend-starter">Github repo</a>
+          <pre>
+            git clone git@github.com:20degresalombre/frontend-starter.git
+          </pre>
+        </li>
+        <li>
+          Install node modules 
+          <pre>
+            npm install
+          </pre>
+        </li>
+        <li>
+          To launch a local webserver, compile your sources (.scss, .js, .tpl.html files), watch, recompile and refresh the view when you save a file just do :
+          <pre>
+            gulp
+          </pre>          
+        </li>
+        <li>
+          Go to <a href="http://localhost:4000/">http://localhost:4000/</a>
+        </li>
+        <li>
+          Modify/add HTML, SCSS, JS files and let the magic happen :D
+        </li>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Fourth section -->
   <section id="who">
 
     <div class="wrapper wow slideInUp">
       <span class="icon-newspaper wow slideInLeft"></span>
-      <h2 class=" wow slideInRight">Made with love by <a href="http://www.20degresalombre.com/">2O degrés à l'ombre</a></h2>
+      <h2 class="wow slideInRight">Made with love by <a href="http://www.20degresalombre.com/">2O degrés à l'ombre</a></h2>
 
       <p>You can find us on</p>
       <div class="table-fixed">
-        <div class="cell-top">
+        <div class="cell top">
           <a href="https://github.com/20degresalombre">
             <span class="icon-github"></span>
             Github
           </a>
         </div>
-        <div class="cell-top">
+        <div class="cell top">
           <a href="https://twitter.com/20degresalombre">
             <span class="icon-twitter"></span>
             Twitter
           </a>
         </div>
-        <div class="cell-top">
+        <div class="cell top">
           <a href="https://www.facebook.com/20degresalombre">
             <span class="icon-facebook"></span>
             Facebook
           </a>
         </div>
-        <div class="cell-top">
+        <div class="cell top">
           <a href="http://www.20degresalombre.com/">
             <span class="icon-link"></span>
             Our website

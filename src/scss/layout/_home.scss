@@ -5,7 +5,10 @@
 // This is an exemple for the starter demo, you can delete all the followings
 
 #home{
-
+  
+  /*------------------------------------*\
+    == Home > First Pannel
+  \*------------------------------------*/
   #firstPanel{
     min-height: 100vh;
     text-align: center;
@@ -29,15 +32,44 @@
     height: 100vh;
   }
   
+
+  /*------------------------------------*\
+    == Home > Feature
+  \*------------------------------------*/
   #feature{
     background-color: $grey-soft;
     padding: 50px 0;
     text-align: center;
     
-    span{
-      display: block;
+    .cell{
+      span{
+        display: block;
+        margin-top: 15px;
+        font-size: rem(50);
+        color: $base-btn-color;
+      }
+      &:hover, &:focus{
+        span{
+          color: $base-btn-color-hover;
+        }
+      }
+      
+      .cell{
+        span{
+          font-size: rem(40);
+          color: $grey-soft-darker;
+        }
+
+        &:hover, &:focus{
+          span{
+            color: $grey-soft-darkest;
+          }
+        }
+      }
+    }
+    
+    h2{
       margin-top: 15px;
-      font-size: rem(40);
     }
     @media (max-width: $w540){
       .cell{
@@ -47,7 +79,11 @@
       }
     }
   }
+  
 
+  /*------------------------------------*\
+    == Home > Who
+  \*------------------------------------*/
   #who{
     padding: 80px 0;
 
@@ -65,7 +101,7 @@
       font-size: em(18);
       text-align: center;
     }
-    .cell-top{
+    .cell.top{
       text-align: center;
 
       span{
@@ -80,10 +116,12 @@
         }
       }
       @media (max-width: $w540){
-        &+.cell-top{
+        &+.cell.top{
           margin-top: 20px;
         }
       }
     }
   }
+
+
 }

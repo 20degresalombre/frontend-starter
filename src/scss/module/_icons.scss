@@ -33,8 +33,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-area-graph:before {
+  content: "\e600";
+}
+
+.icon-back-in-time:before {
+  content: "\e601";
+}
+
+.icon-gauge:before {
+  content: "\e602";
+}
+
+.icon-light-bulb:before {
+  content: "\e603";
+}
+
+.icon-stopwatch:before {
+  content: "\e605";
+}
+
+.icon-atom:before {
+  content: "\e606";
+}
+
+.icon-graph:before {
+  content: "\e607";
+}
+
 .icon-newspaper:before {
   content: "\e904";
+}
+
+.icon-stopwatch2:before {
+  content: "\e952";
+}
+
+.icon-hour-glass:before {
+  content: "\e979";
 }
 
 .icon-cogs:before {
@@ -49,16 +85,24 @@
   content: "\e9a5";
 }
 
+.icon-meter:before {
+  content: "\e9a6";
+}
+
+.icon-meter2:before {
+  content: "\e9a7";
+}
+
+.icon-power:before {
+  content: "\e9b5";
+}
+
 .icon-link:before {
   content: "\e9cb";
 }
 
-.icon-google-plus:before {
-  content: "\ea88";
-}
-
 .icon-facebook:before {
-  content: "\ea8c";
+  content: "\ea8d";
 }
 
 .icon-twitter:before {
@@ -68,4 +112,3 @@
 .icon-github:before {
   content: "\eab3";
 }
-

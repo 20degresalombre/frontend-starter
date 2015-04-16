@@ -9,7 +9,7 @@ Hi, this is a quick Front-end project starter using gulp and sass.
 
 - Then ```npm install``` 
 
-- To launch a local webserver, compile your sources (.scss, .js, .tpl.html files), watch, recompile and refresh the view when you save a file just do : ```gulp``
+- To launch a local webserver, compile your sources (.scss, .js, .tpl.html files), watch, recompile and refresh the view when you save a file just do : ```gulp```
 
 - Go to [http://localhost:4000/]()
 

@@ -55,6 +55,7 @@
       }
       
       .cell{
+        padding: 0 5px;
         span{
           font-size: rem(40);
           color: $grey-soft-darker;
@@ -66,18 +67,26 @@
           }
         }
       }
+      @media (max-width: $w880){
+        display: block;
+        .cell{
+          display: table-cell;
+        }
+        &+.cell{
+          margin-top: 50px;
+        }
+      }
+      @media (max-width: $w540){
+        .cell{
+          display: block;
+        }
+      }
     }
     
     h2{
       margin-top: 15px;
     }
-    @media (max-width: $w540){
-      .cell{
-        &+.cell{
-          margin-top: 50px;
-        }
-      }
-    }
+
   }
   
 

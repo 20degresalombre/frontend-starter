@@ -1,0 +1,6 @@
+/* --------------------------------------------------------------- */
+/* == Labels                                                       */
+/* --------------------------------------------------------------- */
+
+// Fix tap events on label that doesn't checked the input due to Fastclick
+label > * { pointer-events: none; }

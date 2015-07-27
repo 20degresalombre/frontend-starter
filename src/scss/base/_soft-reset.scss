@@ -14,19 +14,19 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    transition: all ease-in-out .4s;
+    // transition: all ease-in-out .4s;
 }
 
 body {
   position: relative;
   height: 100%;
   margin: 0;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $soft-reset-body-font-family;
+  font-size: $soft-reset-body-font-size;
   font-weight: 400;
-  line-height: $base-line-height;
-  color: $base-font-color;
-  background-color: $base-background-color;
+  line-height: $soft-reset-body-line-height;
+  color: $soft-reset-body-color;
+  background-color: $soft-reset-body-background;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -80,4 +80,8 @@ blockquote,
 figure {
   margin-left: 0;
   margin-right: 0;
+}
+
+button{
+  cursor: pointer;
 }

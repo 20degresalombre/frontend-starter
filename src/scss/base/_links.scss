@@ -2,14 +2,24 @@
 /* == Links                                                        */
 /* --------------------------------------------------------------- */
 
-a {
+a{
   text-decoration: none;
-  color: $base-link-color;
+  color: $links-a-color;
   background: transparent;
   transition: all 0.3s ease-in-out;
   
   &:active, &:hover, &:focus {
     outline: 0;
-    color: $base-link-color-hover;
+    color: $links-a-color-hover;
+  }
+}
+
+.link{
+  color: $link-link-color;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active{
+    color: $link-link-hover-color;
+    text-decoration: underline;
   }
 }

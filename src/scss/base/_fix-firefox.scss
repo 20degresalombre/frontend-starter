@@ -1,0 +1,29 @@
+/*------------------------------------*\
+            Fixs for Firefox
+\*------------------------------------*/
+
+
+/**
+* Put an element min-height to 100vh on Firefox
+* ---------------------------------------------
+* Exemple of use :
+* @include firefox-message("#home header");
+*/
+@mixin firefox-vh($selector) {
+  _:-moz-tree-row(hover), #{$selector} {
+    height: 100vh;
+  }
+}
+
+
+/**
+* Put an element to a specified min-height on firefox
+* ---------------------------------------------------
+* Exemple of use :
+* @include firefox-min-height("#home header", "100vh");
+*/
+@mixin firefox-min-height($selector, $value) {
+  _:-moz-tree-row(hover), #{$selector} {
+    height: #{$value};
+  }
+}

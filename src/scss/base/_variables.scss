@@ -1,6 +1,6 @@
-/* --------------------------------------------------------------- */
-/* == Variables                                                    */
-/* --------------------------------------------------------------- */
+/* ---------------------------------------------------------------- /
+*                             Variables
+* ---------------------------------------------------------------- */
 
 /*------------------------------------*\
     == Colors
@@ -8,8 +8,6 @@
 
 $white                      : #fff;
 $black                      : #000;
-$green                      : #00ba80;
-$green-hover                : #009c6b;
 $blue-fb-button             : #3b5994;
 $blue-fb-button-shadow      : #374d83;
 $grey-soft                  : #eee;
@@ -17,37 +15,126 @@ $grey-soft-darker           : darken($grey-soft, 25%);
 $grey-soft-darkest          : darken($grey-soft, 45%);
 
 
+
+
+$white-0                : #fff;
+
+$black-0                : #000;
+$black-0--alpha-00      : rgba(0, 0, 0, 0);
+$black-0--alpha-05      : rgba(0, 0, 0, 0.5);
+
+$red-0                  : #ff0000;
+
+$green-0                : #00ff00;
+$green-1                : #00ba80;
+$green-2                : #009c6b;
+$green-3                : darken($green-2, 5%);
+
+
+$grey-1                 : #4a4b4e;
+$grey-2                 : #f4f4f4;
+$grey-2--60             : transparentize($grey-2, 0.6);
+$grey-3                 : darken($grey-2, 25%);
+
+
+
+
 /*------------------------------------*\
     == Config
 \*------------------------------------*/
 
-$base-background-color      : $white;
-$base-font-color            : $black;
-$base-link-color            : $green;
-$base-link-color-hover      : $green-hover;
-$base-btn-color             : $green;
-$base-btn-color-hover       : $green-hover;
+
+/**
+* base/_soft-reset
+*/
+$soft-reset-body-font-family  : Lato, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$soft-reset-body-font-size    : rem(16);
+$soft-reset-body-line-height  : 1.625em;
+$soft-reset-body-color        : $grey-1;
+$soft-reset-body-background   : $white-0;
 
 
-/*------------------------------------*\
-    == Breakpoints
-\*------------------------------------*/
-
-$bp-ultra-large-screen      : em(1920);
-$bp-extra-large-screen      : em(1600);
-$bp-large-screen            : em(1280);
-$w960                       : em(960);
-$w880                       : em(880);
-$w540                       : em(540);
-$w400                       : em(400);
-$w325                       : em(325);
+/**
+* base/_typography
+*/
+$h1-color                 : $grey-1;
+$h2-color                 : $grey-1;
+$h3-color                 : $grey-1;
+$h4-color                 : $grey-1;
+$h5-color                 : $grey-1;
+$h6-color                 : $grey-1;
 
 
-/*------------------------------------*\
-    == Fonts
-\*------------------------------------*/
+/**
+* base/_links
+*/
+$links-a-color            : $green-1 ;
+$links-a-color-hover      : $green-2;
+$link-link-color          : $green-1;
+$link-link-hover-color    : $green-2;
 
-$base-font-family           : Lato, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$code-font                  : 'Source Code Pro', Consolas, monospace;
-$base-font-size             : em(16);
-$base-line-height           : 1.625em;
+
+/**
+* module/_focus
+*/
+$focus-outline : $white-0;
+
+
+/**
+* module/_form
+*/
+$form-input-wrong-border          : $red-0;
+$form-input-good-border           : $green-0;
+$form-contact-message-test-color  : $red-0;
+$form-spinner-div-background      : $green-1;
+
+
+/**
+* module/_button
+*/
+$button-color                       : $green-1;
+$button-color-hover                 : $green-2;
+$button-btn-color                   : $white-0;
+$button-btn-background              : $green-1;
+$button-btn-border                  : $green-1;
+$button-btn-text-shadow             : $green-3;
+$button-btn-box-shadow              : $green-3;
+$button-btn-hover-background        : $green-2;
+$button-btn-hover-border            : $green-2;
+$button-btn-outline-color           : $green-1;
+$button-btn-outline-background      : $black-0--alpha-00;
+$button-btn-outline-border          : $green-1;
+$button-btn-outline-hover-color     : $green-2;
+$button-btn-outline-hover-border    : $green-2;
+$button-btn-outline-2-color         : $green-1;
+$button-btn-outline-2-background    : $black-0--alpha-00;
+$button-btn-outline-2-border        : $green-1;
+$button-btn-outline-2-hover-color   : $green-2;
+$button-btn-outline-2-hover-border  : $green-2;
+
+
+/**
+* module/_info-box
+*/
+$info-box-info-box-background       : $grey-2;
+$info-box-info-box-border           : $grey-1;
+
+
+/**
+* module/_input-file
+*/
+$input-file-btn-file-input-type-file-background         : $green-1;
+$input-file-input-group-input-type-text-background      : $grey-2--60;
+$input-file-input-group-btn-secondary-border            : $green-2;
+$input-file-input-group-btn-secondary-background        : transparent;
+$input-file-input-group-btn-secondary-color             : $green-2;
+$input-file-input-group-btn-secondary-hover-background  : $green-2;
+$input-file-input-group-btn-secondary-hover-color       : $green-1;
+$input-file-780-input-group-input-type-text-border      : $grey-1; 
+
+
+/**
+* module/_top-header
+*/
+$top-header-color         : $white-0;
+$top-header-box-shadow    : $black-0--alpha-05;

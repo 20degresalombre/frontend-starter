@@ -18,7 +18,7 @@
     }
     
     // Responsive, force the fist panel to display table / table-cell to vertical align middle it !
-    @media (max-width: $w540){
+    @media (max-width: 540px){
       display: table;
       .cell{
         display: table-cell;
@@ -46,11 +46,11 @@
         display: block;
         margin-top: 15px;
         font-size: rem(50);
-        color: $base-btn-color;
+        color: $green-1;
       }
       &:hover, &:focus{
         span{
-          color: $base-btn-color-hover;
+          color: $green-2;
         }
       }
       
@@ -58,16 +58,16 @@
         padding: 0 5px;
         span{
           font-size: rem(40);
-          color: $grey-soft-darker;
+          color: $grey-3;
         }
 
         &:hover, &:focus{
           span{
-            color: $grey-soft-darkest;
+            color: $grey-1;
           }
         }
       }
-      @media (max-width: $w880){
+      @media (max-width: 880px){
         display: block;
         .cell{
           display: table-cell;
@@ -76,7 +76,7 @@
           margin-top: 50px;
         }
       }
-      @media (max-width: $w540){
+      @media (max-width: 540px){
         .cell{
           display: block;
         }
@@ -117,14 +117,14 @@
         display: block;
         margin-bottom: 10px;
         font-size: rem(40);
-        color: $black;
+        color: $grey-1;
       }
       &:hover{
         span{
-          color: $green-hover;
+          color: $green-2;
         }
       }
-      @media (max-width: $w540){
+      @media (max-width: 540px){
         &+.cell.top{
           margin-top: 20px;
         }
@@ -132,5 +132,23 @@
     }
   }
 
+
+
+  /*------------------------------------*\
+    == Home > How
+  \*------------------------------------*/
+  #how{
+    
+    .cell{
+      padding: 10px;
+      text-align: center;
+    }
+
+    pre{
+      // display: block;
+
+      white-space: pre-wrap;
+    }
+  }
 
 }

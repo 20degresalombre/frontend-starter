@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------- /
+*                         Module focus
+* ---------------------------------------------------------------- */
+
+
+
+/**
+* Modify default focus on elements
+*/
+*:focus{
+  outline-color: $focus-outline;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}

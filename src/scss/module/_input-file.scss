@@ -1,0 +1,82 @@
+/* ---------------------------------------------------------------- /
+*                          Module input-file
+* ---------------------------------------------------------------- */
+
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  // font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: $input-file-btn-file-input-type-file-background;
+  cursor: pointer;
+  display: inline-block;
+
+  &::-webkit-file-upload-button, button{
+    cursor: pointer;
+  }
+}
+.input-group{
+  display: block;
+  margin-top: 8px;
+
+  input[type=text]{
+    display: inline-block;
+    width: 154px !important;
+    margin: 0px;
+    padding: 12px 12px 11px 12px;
+    vertical-align: top;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    background-color: $input-file-input-group-input-type-text-background;
+
+  }
+  .btn-secondary{
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $input-file-input-group-btn-secondary-border;
+    width: 80px !important;
+    display: inline-block;
+    padding: 8px 0;
+    background-color: $input-file-input-group-btn-secondary-background;
+    color: $input-file-input-group-btn-secondary-color;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.6em;
+    
+    &:hover, &:focus{
+      background-color: $input-file-input-group-btn-secondary-hover-background;
+      color: $input-file-input-group-btn-secondary-hover-color;
+    }
+
+    label{
+      margin: 0;
+      cursor: pointer;
+      transition: none;
+    }
+  }
+}
+
+@media(max-width: 780px){
+  .input-group input[type=text] { 
+    width: 100% !important; 
+    border: 1px solid $input-file-780-input-group-input-type-text-border; 
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+  }
+  .input-group .btn-secondary   { 
+    width: 100% !important;
+    border-radius: 0 0 4px 4px;
+  }
+}

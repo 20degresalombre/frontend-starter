@@ -11,10 +11,10 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: $bp-extra-large-screen){
+  @media (min-width: 1600px){
     max-width: 1200px;
   }
-  @media (max-width: $w540){
+  @media (max-width: 540px){
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -28,11 +28,25 @@
 .table {
   display: table;
   width: 100%;
-}
-.table-fixed {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
+  
+  // .table-fixed
+  &-fixed{
+    @extend .table;
+    table-layout: fixed;
+  }
+  
+  // .table-auto
+  &-auto{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // .table-auto-fixed
+    &-fixed{
+      @extend .table-auto;
+      table-layout: fixed;
+    }
+  }
 }
 
 .cell {
@@ -48,9 +62,17 @@
   display: inline-block;
 }
 
-@media (max-width: $w540){
-  .table, .table-fixed, .cell, .cell-top{
+.bl{
+  display: block;
+}
+
+@media (max-width: 540px){
+  .table, .table-auto, .cell{
     display: block;
     text-align: center;
   }
+}
+
+.text-right{
+  text-align: right;
 }

@@ -1,0 +1,19 @@
+/* ---------------------------------------------------------------- /
+*                         Module info box
+* ---------------------------------------------------------------- */
+
+
+
+/**
+* Display an info box
+* -------------------
+*/
+.info-box{
+  display: block;
+  background-color: $info-box-info-box-background;
+  border: 1px solid $info-box-info-box-border;
+  padding: 7px 20px;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight:300;
+}

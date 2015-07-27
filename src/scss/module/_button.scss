@@ -2,41 +2,68 @@
 /* == Module button                                                */
 /* --------------------------------------------------------------- */
 
-.btn, .btn-outline{
-  display: inline-block;
-  border: 1px solid $base-btn-color;
-  padding: 5px 20px;
-  border-radius: 25px;
-  text-decoration: none;
 
-  &:active, &:hover, &:focus {
-    border: 1px solid $base-btn-color-hover;
-  }
+@mixin button-style($color, $background-color, $border-color){
 
-  @media(max-width: $w400){
-    display: block;
+  display:inline-block;
+  padding:0 1em;
+  color: #{$color};
+  line-height:2.3em;
+  font-style:normal;
+  text-decoration:none;
+  text-align:center;
+  border-radius:4px;
+  border: 1px solid #{$border-color};
+  background-color: #{$background-color};
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 
-    &+.btn, &+.btn-outline{
-      margin-top: 10px;
-    }
-  }
 }
 
-.btn, .btn:visited{
-  background-color: $base-btn-color;
-  color: $white;
 
-  &:active, &:hover, &:focus {
-    background-color: $base-btn-color-hover;
-    color: $white;
+.btn, .btn:visited {
+
+  @include button-style($button-btn-color, $button-btn-background, $button-btn-border);
+  
+  text-shadow:1px 1px 0px $button-btn-text-shadow;
+  box-shadow: 0 3px 0 0 $button-btn-box-shadow;
+
+  &:hover, &:focus{
+    background-color: $button-btn-hover-background;
+    border: 1px solid $button-btn-hover-border;
+  }
+  &:active {
+    position:relative;
+    top:1px;
   }
 }
 
 .btn-outline, .btn-outline:visited{
-  background-color: transparent;
-  color: $base-btn-color;
 
-  &:active, &:hover, &:focus {
-    color: $base-btn-color-hover;
+  @include button-style($button-btn-outline-color, $button-btn-outline-background, $button-btn-outline-border);
+  
+  font-weight: 400;
+
+  &:hover, &:focus{
+    color: $button-btn-outline-hover-color;
+    border: 1px solid $button-btn-outline-hover-border;
   }
+}
+
+.btn-outline-2, .btn-outline-2:visited{
+
+  @include button-style($button-btn-outline-2-color, $button-btn-outline-2-background, $button-btn-outline-2-border);
+  
+  font-weight: 400;
+
+  &:hover, &:focus{
+    color: $button-btn-outline-2-hover-color;
+    border: 1px solid $button-btn-outline-2-hover-border;
+  }
+}
+
+.btn-submit, .btn-submit:visited{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
 }

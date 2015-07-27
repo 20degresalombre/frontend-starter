@@ -1,0 +1,78 @@
+/*------------------------------------*\
+        Top header layout module
+\*------------------------------------*/
+
+
+/**
+* Create a top header element to extend
+* -------------------------------------
+* Exemple of use :
+* @include top-header($img);
+*/
+@mixin top-header($img){
+  display: table;
+  background: url(../images/#{$img}) no-repeat center center;
+  background-size: cover;
+  min-height: em(350);
+  width: 100%;
+  text-align: center;
+  color: $top-header-color;
+  margin: auto;
+  vertical-align: middle;
+  box-shadow: inset 0 -18px 13px -10px $top-header-box-shadow;
+
+  @media (max-width: 540px){
+    display: table;
+
+    .cell{
+      display: table-cell;
+    }
+  }
+}
+
+
+
+/**
+* Create p for top header element to extend
+* -----------------------------------------
+* Exemple of use :
+* @include top-header-p;
+*/
+@mixin top-header-p(){
+  text-align: center;
+  font-weight: 300;
+  font-size: em(24);
+  max-width: 650px;
+  line-height: 1.1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/**
+* Create a full header element to extend
+* --------------------------------------
+* Exemple of use :
+* @include top-header($img);
+*/
+@mixin full-header($img){
+  display: table;
+  background: url(../images/#{$img}) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: $top-header-color;
+  margin: auto;
+  vertical-align: middle;
+  box-shadow: inset 0 -18px 13px -10px $top-header-box-shadow;
+
+  @media (max-width: 540px){
+    display: table;
+
+    .cell{
+      display: table-cell;
+    }
+  }
+}

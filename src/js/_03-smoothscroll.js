@@ -7,7 +7,7 @@ $(function(){
 
   // SMOOTH SCROLLING (with negative scroll of 0 for header)
   $('a[href*=#]:not([href=#])').on('click touchend', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {

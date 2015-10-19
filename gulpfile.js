@@ -1,6 +1,6 @@
 // Load plugins
 var gulp          = require('gulp'),
-    $             = require('gulp-load-plugins')(),
+    $load         = require('gulp-load-plugins')(),
     sass          = require('gulp-ruby-sass'),
     autoprefixer  = require('gulp-autoprefixer'),
     minifycss     = require('gulp-minify-css'),
@@ -15,7 +15,7 @@ var gulp          = require('gulp'),
     fileinclude   = require('gulp-file-include'),
     runSequence   = require('run-sequence');
 
-if(argv._ != "build"){
+if(argv._ !== "build"){
   var livereload    = require('gulp-livereload'),
       opn           = require('opn');
 }
@@ -47,10 +47,10 @@ function notifyLiveReload(event) {
 // Styles
 gulp.task('styles', function() {
   return gulp.src('src/scss/**/*.scss')
-        .pipe($.changed('styles', {
+        .pipe($load.changed('styles', {
             extension: '.scss'
         }))
-        .pipe($.sass({
+        .pipe($load.sass({
                 includePaths: require('node-bourbon').includePaths
             })
             .on('error', console.error.bind(console))
@@ -58,15 +58,15 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('www/css/'))
         .pipe(gulp.dest('www/css/'))
         .pipe(cmq({log: true }))
-        .pipe($.autoprefixer({
+        .pipe($load.autoprefixer({
             browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
             cascade: false
         }))
-        .pipe($.if( '*.css', $.csso() ))
-        .pipe($.rename('styles.min.css'))
+        .pipe($load.if( '*.css', $load.csso() ))
+        .pipe($load.rename('styles.min.css'))
         .pipe(gulp.dest('www/css/'))
         .pipe(gulp.dest('www/css/'))
-        .pipe($.size({
+        .pipe($load.size({
             title: 'styles'
         }));
 });
@@ -85,11 +85,12 @@ gulp.task('scripts', function() {
 
 // Clean
 gulp.task('clean', function(cb) {
-    del(['www/css', 'www/js'], cb)
+    return del(['www/css', 'www/js'], cb);
 });
 
 //Include Templates
 gulp.task('fileinclude', function() {
+  console.log('logged fileinclude start');
   return gulp.src('src/templates/*.html')
     .pipe(fileinclude())
     .pipe(gulp.dest('www/'));

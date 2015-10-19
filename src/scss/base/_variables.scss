@@ -44,6 +44,10 @@ $grey-3                 : darken($grey-2, 25%);
 \*------------------------------------*/
 
 
+////////////////////////////////////////
+// Base
+//
+
 /**
 * base/_soft-reset
 */
@@ -73,6 +77,10 @@ $links-a-color-hover      : $green-2;
 $link-link-color          : $green-1;
 $link-link-hover-color    : $green-2;
 
+
+////////////////////////////////////////
+// Modules
+//
 
 /**
 * module/_focus
@@ -138,3 +146,13 @@ $input-file-780-input-group-input-type-text-border      : $grey-1;
 */
 $top-header-color         : $white-0;
 $top-header-box-shadow    : $black-0--alpha-05;
+
+
+
+////////////////////////////////////////
+// Layout
+//
+
+/**
+* layout/_
+*/

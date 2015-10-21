@@ -9,7 +9,7 @@
 .btn.material {  
   position: relative;
   
-  border-radius: 1.5px;
+  border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16),
               0 3px 6px rgba(0, 0, 0, .23);
@@ -20,6 +20,23 @@
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .19),
                 0 6px 6px rgba(0, 0, 0, .23);
+  }
+}
+
+.btn.material.flat{
+  box-shadow: 0 0px 0px rgba(0, 0, 0, .16),
+              0 0px 0px rgba(0, 0, 0, .23);
+
+  &:hover {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .19),
+                0 0px 0px rgba(0, 0, 0, .23);
+  }
+}
+
+.btn.material.big{
+  .wave {
+    -webkit-animation-name: waveBig;
+    animation-name: waveBig;
   }
 }
 
@@ -58,5 +75,22 @@
   }
   100% {
     transform: scale(165);
+  }
+}
+
+@-webkit-keyframes waveBig {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(300);
+  }
+}
+@keyframes waveBig {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(300);
   }
 }
